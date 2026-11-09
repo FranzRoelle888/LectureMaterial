@@ -9,8 +9,7 @@
 %% stages by tools/sketch_stages.py from
 %% sketches/ch04_training_data/stages_spec.json. The spine's empty frames wait
 %% in an iffalse block at the end of each subchapter. Dividers follow the
-%% sketches: Data Augmentation has none yet, so it has no \subsection line and
-%% no outline entry until they land.
+%% sketches; Data Augmentation opens on IE4n's last band so far.
 %%
 %% Fragment of intelligence_engineering.tex. One chapter is one lecture and
 %% gets exactly ONE \lecturepage, at the top. Inside it every \subsection
@@ -20,8 +19,10 @@
 \lecturepage{IV}{Training Data}{}
 \section[Training Data]{Training Data}
 
-% The sketches carry no \slidesources marker: they rest on Huyen's chapter 4.
-\nocite{Huyen2022}
+% The sketches carry no \slidesources marker: they rest on Huyen's chapter 4,
+% and IE4j names Schutera's frugal labeler and smolVLA papers as further
+% reading.
+\nocite{Huyen2022,Schutera2022,Schutera2026}
 
 % This lecture in one slide. The card is rendered from lecture_outline.tex,
 % the same source ch00 renders the whole course from, so the two cannot drift.
@@ -402,7 +403,7 @@
 \end{frame}
 
 % IE4jI: in yellow: further reading, The frugal labeller and Poisoning
-% smolVLA. No bib entries yet, the sketch does not say which papers.
+% smolVLA, Schutera2022 and Schutera2026.
 \begin{frame}[plain]
   \fulldrawing{IE4jI}{Further reading: frugal labeller, smolVLA}
 \end{frame}
@@ -740,10 +741,37 @@
   \fulldrawing{IE4n3}{Class wise metrics}
 \end{frame}
 
-% IE4n4: the sketch stops at this heading, IE4n is where the material ends for
-% now.
+% IE4n4: precision, recall and F1 score are asymmetric with respect to true
+% positive.
 \begin{frame}[plain]
-  \fulldrawing{IE4n4}{Resampling}
+  \fulldrawing{IE4n4}{Precision, recall, F1 are asymmetric}
+\end{frame}
+
+% IE4n5: ROC, receiver operating characteristics, or PR. TP rate over FP rate,
+% area under curve.
+\begin{frame}[plain]
+  \fulldrawing{IE4n5}{ROC or PR curve, area under the curve}
+\end{frame}
+
+% IE4n6: Resampling modifies the underlying distribution.
+\begin{frame}[plain]
+  \fulldrawing{IE4n6}{Resampling modifies the underlying distribution}
+\end{frame}
+
+% IE4n7: undersampling: Tomek deletes closest to minority class first.
+\begin{frame}[plain]
+  \fulldrawing{IE4n7}{Undersampling: Tomek deletes closest first}
+\end{frame}
+
+% IE4n8: x prime i equals gamma times x i.
+\begin{frame}[plain]
+  \fulldrawing{IE4n8}{x' = gamma times x}
+\end{frame}
+
+% IE4n9: oversampling: copy, augment, collect, recombine, synthetic
+% generation.
+\begin{frame}[plain]
+  \fulldrawing{IE4n9}{Oversampling: copy, augment, synthesize}
 \end{frame}
 
 % Parked 2026-11-06: the spine's empty frames, the sketches above replace
@@ -819,8 +847,16 @@
 \fi
 
 % ----------------------------------------------------------------------
-% Parked 2026-11-06: the book's Data Augmentation. No sketches yet, and dividers
-% follow the sketches, so no \subsection or outline entry until they land.
+\subsection{Data Augmentation}
+
+% IE4nA: the arrow out of oversampling: augmentation, label preserving
+% perturbation, online during training.
+\begin{frame}[plain]
+  \fulldrawing{IE4nA}{Augmentation: label preserving perturbation}
+\end{frame}
+
+% Parked 2026-11-09: the spine's empty frames, the sketch above replaces
+% them.
 \iffalse
 \begin{frame}{Simple Label-Preserving Transformations}
   \begin{columns}[T,onlytextwidth]
